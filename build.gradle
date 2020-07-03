@@ -1,0 +1,36 @@
+plugins {
+   id 'java'
+   id 'application'
+   id 'org.springframework.boot' version '2.3.1.RELEASE'
+   id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+}
+
+group = 'com.giordanbetat.restapi'
+mainClassName = 'com.giordanbetat.restapi.Application'
+version = '1.0'
+sourceCompatibility = '1.8'
+
+
+repositories {
+    
+    jcenter()
+}
+
+dependencies {
+    
+    compile 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile	'org.springframework.boot:spring-boot-starter-tomcat'
+    compile 'org.springframework.boot:spring-boot-devtools'
+    compile 'org.postgresql:postgresql:42.2.14'
+        
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'junit:junit:4.13'
+
+}
+
+test {
+	useJUnitPlatform()
+}
